@@ -10,9 +10,6 @@
     "clean": "next clean"
   },
   "dependencies": {
-    "@base-ui/react": "latest",
-    "@hookform/resolvers": "latest",
-    "autoprefixer": "latest",
     "class-variance-authority": "latest",
     "clsx": "latest",
     "lucide-react": "latest",
@@ -23,7 +20,6 @@
     "react": "latest",
     "react-dom": "latest",
     "recharts": "latest",
-    "shadcn": "latest",
     "tailwind-merge": "latest",
     "zustand": "latest"
   },
@@ -33,9 +29,9 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "firebase-tools": "latest",
     "tailwindcss": "latest",
     "tw-animate-css": "latest",
     "typescript": "latest"
