@@ -1,0 +1,209 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-sans);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: #e0e5ec;
+    --foreground: #333333;
+    --card: #e0e5ec;
+    --card-foreground: #333333;
+    --popover: #e0e5ec;
+    --popover-foreground: #333333;
+    --primary: #4a6785;
+    --primary-foreground: #ffffff;
+    --secondary: #d1d9e6;
+    --secondary-foreground: #333333;
+    --muted: #d1d9e6;
+    --muted-foreground: #666666;
+    --accent: #d1d9e6;
+    --accent-foreground: #333333;
+    --destructive: #b33a3a;
+    --border: #b8c2d1;
+    --input: #b8c2d1;
+    --ring: #4a6785;
+    --chart-1: #4a6785;
+    --chart-2: #8da3b9;
+    --chart-3: #c1c1c1;
+    --chart-4: #a0a0a0;
+    --chart-5: #808080;
+    --radius: 1rem;
+    --sidebar: #e0e5ec;
+    --sidebar-foreground: #333333;
+    --sidebar-primary: #4a6785;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #d1d9e6;
+    --sidebar-accent-foreground: #333333;
+    --sidebar-border: #b8c2d1;
+    --sidebar-ring: #4a6785;
+}
+
+.dark {
+    --background: #1a1a1a;
+    --foreground: #e0e0e0;
+    --card: #1a1a1a;
+    --card-foreground: #e0e0e0;
+    --popover: #1a1a1a;
+    --popover-foreground: #e0e0e0;
+    --primary: #5c7a99;
+    --primary-foreground: #ffffff;
+    --secondary: #2a2a2a;
+    --secondary-foreground: #e0e0e0;
+    --muted: #2a2a2a;
+    --muted-foreground: #999999;
+    --accent: #2a2a2a;
+    --accent-foreground: #e0e0e0;
+    --destructive: #d15050;
+    --border: #333333;
+    --input: #333333;
+    --ring: #5c7a99;
+    --chart-1: #5c7a99;
+    --chart-2: #8da3b9;
+    --chart-3: #4a4a4a;
+    --chart-4: #333333;
+    --chart-5: #2a2a2a;
+    --sidebar: #1a1a1a;
+    --sidebar-foreground: #e0e0e0;
+    --sidebar-primary: #5c7a99;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #2a2a2a;
+    --sidebar-accent-foreground: #e0e0e0;
+    --sidebar-border: #333333;
+    --sidebar-ring: #5c7a99;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .neu-card {
+    border-radius: 22px;
+    background: #e0e0e0;
+    box-shadow: 14px 14px 34px #acacac,
+                -14px -14px 34px #ffffff;
+  }
+  .dark .neu-card {
+    background: #1a1a1a;
+    box-shadow: 14px 14px 34px #0d0d0d,
+                -14px -14px 34px #272727;
+  }
+  .neu-inset {
+    border-radius: 22px;
+    background: #e0e0e0;
+    box-shadow: inset 14px 14px 28px #acacac,
+                inset -14px -14px 28px #ffffff;
+    padding: 1.5rem;
+  }
+  .dark .neu-inset {
+    background: #1a1a1a;
+    box-shadow: inset 14px 14px 28px #0d0d0d,
+                inset -14px -14px 28px #272727;
+  }
+  .neu-input {
+    border-radius: 22px;
+    background: #e0e0e0;
+    box-shadow: inset 14px 14px 28px #acacac,
+                inset -14px -14px 28px #ffffff;
+    padding: 1rem;
+  }
+  .dark .neu-input {
+    background: #1a1a1a;
+    box-shadow: inset 14px 14px 28px #0d0d0d,
+                inset -14px -14px 28px #272727;
+  }
+  .neu-button {
+    border-radius: 22px;
+    background: #e0e0e0;
+    box-shadow: 14px 14px 34px #acacac,
+                -14px -14px 34px #ffffff;
+    transition: all 0.2s ease;
+  }
+  .dark .neu-button {
+    background: #1a1a1a;
+    box-shadow: 14px 14px 34px #0d0d0d,
+                -14px -14px 34px #272727;
+  }
+
+  /* Neumorphic Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    box-shadow: inset 3px 3px 6px #acacac, inset -3px -3px 6px #ffffff;
+    border-radius: 10px;
+  }
+  .dark ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    box-shadow: inset 3px 3px 6px #0d0d0d, inset -3px -3px 6px #272727;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    box-shadow: 3px 3px 6px #acacac, -3px -3px 6px #ffffff;
+    border-radius: 10px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+    box-shadow: 3px 3px 6px #0d0d0d, -3px -3px 6px #272727;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d0d0d0;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #252525;
+  }
+}
